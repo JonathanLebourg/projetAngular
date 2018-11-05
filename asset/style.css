@@ -1,0 +1,30 @@
+nav.color {
+  background-color: #bc0303;
+  color: #000000;
+}
+
+.txtnavcolor {
+  color: #ffffff;
+}
+
+.btnsearch {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #000000
+}
+
+.btnsearch:hover {
+  background-color: #bc0303;
+  color: #000000;
+  border-color: #000000
+}
+
+.drpdown:hover {
+  background-color: #bc0303;
+}
+
+.homlog {
+  background-size: cover;
+  width: 45px;
+  height: 35px;
+}
