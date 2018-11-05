@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr" ng-app="cart">
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>BD Lyrium</title>
   </head>
-
-  <body>
-
+  <body ng-controller="addProduct">
+    <h1 id="id" ng-model="id" ng-init="id=001">{{id}} - <span id="name" ng-model="name" ng-init="name='Titre'"></span></h1>
+    <p id="amount" ng-model="amount" ng-init="amount=1"></p>
+    <button name="addCart" ng-click="addCart()">Ajouter au panier</button>
+    <div ng-view></div>
+    <footer>
+      <div class="container lg-md-3">
+        <p>Horaires</p>
+      </div>
+      <div class="container lg-md-3">
+        <p>Adresse</p>
+      </div>
+      <div class="container lg-md-3">
+        <p>Contact</p>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.7.5/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.7.5/angular-messages.min.js"></script>
+    <script src="asset/script.js"></script>
   </body>
-
-  <footer>
-    <div class="container lg-md-3">
-    <p>Horaires</p>
-    </div>
-    <div class="container lg-md-3">
-    <p>Adresse</p>
-    </div>
-    <div class="container lg-md-3">
-    <p>Contact</p>
-    </div>
-  </footer>
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
-  <script src="https://code.angularjs.org/1.7.5/angular-route.js%22%3E"></script>
-  <script src="https://code.angularjs.org/1.7.5/angular-messages.min.js%22%3E"></script>
 </html>
