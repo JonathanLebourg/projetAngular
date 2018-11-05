@@ -1,37 +1,140 @@
 <!DOCTYPE html>
 <html lang="fr" ng-app="cart">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-    <!-- My CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>BD Lyrium</title>
-  </head>
-  <body ng-controller="addProduct">
-    <h1 id="id" ng-model="id" ng-init="id=001">{{id}} - <span id="name" ng-model="name" ng-init="name='Titre'"></span></h1>
-    <p id="amount" ng-model="amount" ng-init="amount=1"></p>
-    <button name="addCart" ng-click="addCart()">Ajouter au panier</button>
-    <div ng-view></div>
-    <footer>
-      <div class="container lg-md-3">
-        <p>Horaires</p>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <!-- BootWatch CSS -->
+  <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>BD Lyrium</title>
+</head>
+<body ng-controller="product">
+  <div class="">
+    <h1>ID 1 - Titre 1</h1>
+    <p>Quantité : 1</p>
+    <p>Prix 99.99€</p>
+    <p>Image 1</p>
+    <p>Description 2</p>
+    <button name="addCart" ng-click="addCart('0', 'Test1', 99.99, 'pictureProduct1', 1, 'descriptionProduct1')">Ajouter au panier</button>
+  </div>
+  <div class="">
+    <h1>ID 2 - Titre 2</h1>
+    <p>Quantité : 1</p>
+    <p>Prix 99.99€</p>
+    <p>Image 2</p>
+    <p>Description 2</p>
+    <button name="addCart" ng-click="addCart('1', 'Test2', 99.99, 'pictureProduct2', 1, 'descriptionProduct2')">Ajouter au panier</button>
+  </div>
+  <div ng-view></div>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Panier</button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Panier</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+            <div class="card shopping-cart">
+              <div class="card-header bg-dark text-light">
+                <div class="row">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  <p class="pl-3">Article(s)</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <!-- PRODUCT -->
+                <div ng-repeat="article in articleArray" class="row">
+                  <div class="col-12 col-sm-12 col-md-2 text-center">
+                    <img class="img-responsive" src="" alt="img" width="120" height="80">
+                  </div>
+                  <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                    <h4 class="product-name"><strong>{{article.name}}</strong></h4>
+                    <h4>
+                      <small>{{article.description}}</small>
+                    </h4>
+                  </div>
+                  <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                    <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                      <h6><strong>{{article.price}}<span class="text-muted">x</span></strong></h6>
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-4">
+                      <div class="quantity">
+                        <input type="button" value="+" class="plus">
+                        <p>{{article.amount}}</p>
+                        <input type="button" value="-" class="minus">
+                      </div>
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2 text-right">
+                      <button name="deleteCart" type="button" class="btn btn-outline-danger btn-xs">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- END PRODUCT -->
+                <div class="pull-right">
+                  <a href="" class="btn btn-outline-secondary pull-right">
+                    Update shopping cart
+                  </a>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="coupon col-md-5 col-sm-5 no-padding-left pull-left">
+                  <div class="row">
+                    <div class="col-6">
+                      <input type="text" class="form-control" placeholder="cupone code">
+                    </div>
+                    <div class="col-6">
+                      <input type="submit" class="btn btn-default" value="Use cupone">
+                    </div>
+                  </div>
+                </div>
+                <div class="pull-right" style="margin: 10px">
+                  <a href="" class="btn btn-success pull-right">Checkout</a>
+                  <div class="pull-right" style="margin: 5px">
+                    Total price: <b>50.00€</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button data-dismiss="modal" class="btn btn-outline-info btn-sm float-right">Continuer ma commande</button>
+        </div>
       </div>
-      <div class="container lg-md-3">
-        <p>Adresse</p>
-      </div>
-      <div class="container lg-md-3">
-        <p>Contact</p>
-      </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.7.5/angular-route.js"></script>
-    <script src="https://code.angularjs.org/1.7.5/angular-messages.min.js"></script>
-    <script src="asset/script.js"></script>
-  </body>
+    </div>
+  </div>
+  <footer>
+    <div class="container lg-md-3">
+      <p>Horaires</p>
+    </div>
+    <div class="container lg-md-3">
+      <p>Adresse</p>
+    </div>
+    <div class="container lg-md-3">
+      <p>Contact</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.7.5/angular-route.js"></script>
+  <script src="https://code.angularjs.org/1.7.5/angular-messages.min.js"></script>
+  <script src="https://use.fontawesome.com/c560c025cf.js"></script>
+  <script src="asset/script.js"></script>
+</body>
 </html>
