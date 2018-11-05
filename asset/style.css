@@ -25,6 +25,10 @@ nav.color {
 
 .homlog {
   background-size: cover;
-  width: 45px;
-  height: 35px;
+  width: 75px;
+  height: 65px;
+}
+
+.homlog2 {
+  color: #ffffff;
 }
