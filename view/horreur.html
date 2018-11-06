@@ -1,100 +1,16 @@
-<div class="container-fluid mx-auto" id="boutique">
-  <div class="container horreur">
-    <div class="divTitre" text-center>
-      <br><br>
-      <h1 align="center"><div id="horreur">Horreur</div></h1>
-    </div>
-    <div class="row rowbd1">
-      <div id="horreur1" class="item col-md-4 col-12">
-        <div class="itemDetails">
-          <div class="itemImage">
-            <img src="images/Img/horreur/IMG_5885.JPG" alt="Horreur Cosmique" />
-          </div>
-          <div class="itemText">
-            <hr class="hrTitle">
-            <a tabindex="0" class="btn btn-transparent" role="button" data-toggle="popover" data-trigger="focus" title="Horreur cosmique " data-placement="bottom" data-content="RÉSUMÉ : Pour échapper à l’ennui de leurs interminables veillées nocturnes, Igor et le Comte lisent Lovecraft, jouent de l'orgue et discutent de littérature fantastique. Soudain, ils sont interrompus par une visite inattendue : une fonctionnaire de la CAF vient faire un contrôle-surprise. Au village, on raconte des drôles d'histoires sur ce qui se passe au château. Pour continuer à recevoir ses allocations, le Comte doit donc rédiger et livrer immédiatement un rapport détaillé sur sa vie. La fonctionnaire zélée disparaît aussitôt, laissant les deux compères en proie à une profonde inquiétude...
-            Toujours subtil et drôle, ironique et poétique, Aapo Rapi s'interroge et nous interroge, en pointant du doigt le conformisme qui cache la peur de l’autre et l’exclusion.">Horreur<br /> cosmique</a>
-            <hr class="hrTitle">
-            <p class="price-container">Réf : C001<span class="price" id="price1"><br><br>22,00</span><span class="euros">€</span></p>
-          </div>
-        </div>
-        <button id="add1"type="button" class="btn btn-secondary">Ajouter au panier</button>
+<div ng-repeat="data in datas | filter : {category: 'Horreur'}">
+  <div id="{{data.id}}" class="item col-md-4 col-12">
+    <div class="itemDetails">
+      <div class="itemImage">
+        <img src="{{data.picture}}" alt="{{data.alt}}" />
       </div>
-      <div id="horreur2" class="item col-md-4 col-12">
-        <div class="itemDetails">
-          <div class="itemImage">
-            <img src="images/Img/horreur/IMG_5886.JPG" alt="Cirque" />
-          </div>
-          <div class="itemText">
-            <hr class="hrTitle">
-            <a tabindex="0" class="btn btn-transparent" role="button" data-toggle="popover" data-trigger="focus" title="Le cirque des horreurs" data-placement="bottom" data-content="RÉSUMÉ : Découvrez Le cirque des horreurs, le livre de Junji Ito">Le cirque<br>des horreurs</a>
-            <hr class="hrTitle">
-            <p class="price-container">Réf : C002<span class="price" id="price2"><br><br>65,00</span><span class="euros">€</span></p>
-          </div>
-        </div>
-        <button id="add2"type="button" class="btn btn-secondary">Ajouter au panier</button>
-      </div>
-      <div id="horreur3" class="item col-md-4 col-12">
-        <div class="itemDetails">
-          <div class="itemImage">
-            <img src="images/Img/horreur/IMG_5887.JPG" alt="photo Batman" />
-          </div>
-          <div class="itemText">
-            <hr class="hrTitle">
-            <a tabindex="0" class="btn btn-transparent" role="button" data-toggle="popover" data-trigger="focus" title="Choco creed tome 2 - horreur" data-placement="bottom" data-content="RÉSUMÉ : BD Indépendante">Choco Creed<br>tome 2 - horreur</a>
-            <hr class="hrTitle">
-            <p class="price-container">Réf : A003<span id="price3" class="price"><br><br>12,90</span><span class="euros">€</span></p>
-          </div>
-        </div>
-        <button id="add3"type="button" class="btn btn-secondary">Ajouter au panier</button>
+      <div class="itemText">
+      <hr class="hrTitle" />
+        <a tabindex="0" class="btn btn-transparent" role="button" data-toggle="popover" data-trigger="focus" title="{{data.title}}" data-placement="bottom" data-content="Résumé : {{data.description}}">{{hero.title}}<br>{{data.subtitle}}</a>
+        <hr class="hrTitle" />
+        <p class="price-container">Réf : {{data.ref}}<span class="price"><br><br>{{data.price}}</span><span class="euros">€</span></p>
       </div>
     </div>
-    <hr class="middleHr">
-    <div class="row rowbd2">
-      <div id="horreur4" class="item col-md-4 col-12">
-        <div class="itemDetails">
-          <div class="itemImage">
-            <img src="images/Img/horreur/IMG_5888.JPG" alt="X-men" />
-          </div>
-          <div class="itemText">
-            <hr class="hrTitle">
-            <a tabindex="0" class="btn btn-transparent" role="button" data-toggle="popover" data-trigger="focus" title="Dracula, Frankenstein et autres histoires d'horreur" data-placement="bottom" data-content="RÉSUMÉ : Cette édition de l'oeuvre de Guido Crepax - qui réunit Comte Dracula et Frankenstein - plonge le lecteur dans une ambiance particulière car l'auteur et dessinateur de ces adaptations insuffle une atmosphère des plus ténébreuses. Ses traits à l'encre de Chine, la mise en page originale, l'utilisation du noir et blanc, un graphisme souvent froid et anguleux très certainement influencé par ses études en architecture, lui permettent ici de donner la pleine mesure de son graphisme et font de cette version de Dracula et de Frankenstein un album unique.">Dracula, Frankenstein<br>et autres histoires d'horreur</a>
-            <hr class="hrTitle">
-            <p class="price-container">Réf : C004<span class="price" id="price1"><br><br>50,00</span><span class="euros">€</span></p>
-        </div>
-      </div>
-        <button id="add4"type="button" class="btn btn-secondary">Ajouter au panier</button>
-      </div>
-
-      <div id="horreur5" class="item col-md-4 col-12">
-        <div class="itemDetails">
-          <div class="itemImage">
-            <img src="images/Img/horreur/IMG_5889.JPG" alt="Lovecraft" />
-          </div>
-          <div class="itemText">
-            <hr class="hrTitle">
-            <a tabindex="0" class="btn btn-transparent" role="button" data-toggle="popover" data-trigger="focus" title="Lovecraft - quatre classiques de l'horreur " data-placement="bottom" data-content="RÉSUMÉ : La Quête onirique de Kadath l'inconnue, L'Affaire Charles Dexter Ward, Les Montagnes hallucinées et Dans l'abîme du temps, quatre des plus célèbres récits du maître de l'horreur et du fantastique superbement mis en scène par Ian Culbard.">Lovecraft<br>quatre classiques de l'horreur </a>
-            <hr class="hrTitle">
-            <p class="price-container">Réf : C005<span class="price" id="price2"><br><br>32,00</span><span class="euros">€</span></p>
-          </div>
-        </div>
-        <button id="add5"type="button" class="btn btn-secondary">Ajouter au panier</button>
-      </div>
-
-      <div id="heros6" class="item col-md-4 col-12">
-        <div class="itemDetails">
-          <div class="itemImage">
-            <img src="images/Img/horreur/IMG_5890.JPG" alt="Four color fear" />
-          </div>
-          <div class="itemText">
-            <hr class="hrTitle">
-            <a tabindex="0" class="btn btn-transparent" role="button" data-toggle="popover" data-trigger="focus" title="Four color fear - BD d'horreur des années 50 " data-placement="bottom" data-content="RÉSUMÉ : Four Color Fear recueille plus de 40 BD américaines d'horreur spectaculaires, inédites en France, d'avant le Comics Code. Réalisées par une multitude de noms classiques dans l'histoire de la bande dessinée. L'ouvrage comprend une impressionnante galerie de couvertures de séries de terreur des années 1950, de plus de 20 éditeurs d'Amérique du Nord et un article passionnant sur les bandes dessinées de terreur des années 1950 par le spécialiste Greg Sadowsky.">Four color fear<br>BD d'horreur des années 50</a>
-            <hr class="hrTitle">
-            <p class="price-container">Réf : C006<span id="price3" class="price"><br><br>34,90</span><span class="euros">€</span></p>
-          </div>
-        </div>
-        <button id="add6"type="button" class="btn btn-secondary">Ajouter au panier</button>
-      </div>
-    </div>
+    <button name="addCart" ng-click="addCart(data.id, data.title, data.price, data.picture, 1, data.category)" type="button" class="btn btn-secondary">Ajouter au panier</button>
   </div>
 </div>
