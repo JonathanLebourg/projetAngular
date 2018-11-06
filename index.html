@@ -15,9 +15,9 @@
   <!-- DÉBUT NAVBAR -->
 
   <nav class="navbar navbar-expand-lg color">
-    <a class="navbar-brand txtnavcolor" href="#"><img class="homlog" src="./images/Img/logo.png" alt=""></a>
+    <a class="navbar-brand txtnavcolor" href="#"><img class="homlogo" src="./images/Img/logo.png" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x homlog2"></i></span>
+      <span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x homlogo2"></i></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor01">
@@ -30,42 +30,77 @@
             <a class="dropdown-item drpdown" href="#">Science-Fiction</a>
             <a class="dropdown-item drpdown" href="#">Super-Héros</a>
             <a class="dropdown-item drpdown" href="#">Incontournables</a>
-            </div>
-          </li>
-          <li class="nav-item">
-        <a class="nav-link txtnavcolor" href="#">Contacts</a>
-      </li>
-        </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link txtnavcolor" href="#">Contacts</a>
+        </li>
+      </ul>
 
-        <form class="form-inline my-2 my-lg-2">
-          <input class="form-control mr-sm-2" type="text" placeholder="Watchmen ...">
-          <button class="btn btnsearch my-2 my-sm-0" type="submit">Rechercher</button>
-        </form>
-        <a class="nav-link txtnavcolor" href="#"><i class="fas fa-shopping-basket fa-2x"></i></a>
-      </div>
-    </nav>
+      <form class="form-inline my-2 my-lg-2">
+        <input class="form-control mr-sm-2" type="text" placeholder="Watchmen ...">
+        <button class="btn btnsearch my-2 my-sm-0" type="submit">Rechercher</button>
+      </form>
+      <a class="nav-link txtnavcolor" href="#"><i class="fas fa-shopping-basket fa-2x"></i></a>
+    </div>
+  </nav>
 
-    <!-- FIN NAVBAR -->
+  <!-- FIN NAVBAR -->
 
-    <footer>
-      <div class="container lg-md-3">
-        <p>OQUIFHBOUQBEFOBSQOFUBQEFOUQBFOUQBFOQBUFOIQUBOIQSBHJ</p>
+  <!-- FORMULAIRE D'ENVOIS DES COMMANDES -->
+  <div class="container">
+    <form>
+      <fieldset>
+        <legend>Livraison</legend>
+        <div class="row">
+          <div class="form-group col-5">
+            <label for="custfname">Votre Nom</label>
+            <input type="text" class="form-control" id="custfname" placeholder="Entrez votre nom.">
+          </div>
+          <div class="form-group col-5">
+            <label for="custlname">Votre Prénom</label>
+            <input type="text" class="form-control" id="custlname" placeholder="Entrez votre Prénom.">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="custaddress">Votre Adresse</label>
+          <input type="text" class="form-control" id="custaddress" aria-describedby="addressHelp" placeholder="Entre votre adresse.">
+          <small id="addressHelp" class="form-text text-muted">Nous ne divulguerons jamais votre adresse personnelle à un groupe tiers.</small>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox">
+            J'ai lu et accepté les petites conditions que les entreprises mettent et servent à glisser une douille au clients quand ils s'y attendent le moins.
+          </label>
+        </div>
+      </fieldset>
+      <div class="row cheat">
+        <button type="submit" class="btn btn-primary btnsubmit">Envoyer la sauce !</button>
       </div>
-      <div class="container lg-md-3">
-        <p>Adresse</p>
-      </div>
-      <div class="container lg-md-3">
-        <p>AGYAGYAGYAGYAGAYGAYAGYAGYAGYAH</p>
-      </div>
-    </footer>
+    </form>
+  </div>
+  <!-- FIN DU FORMULAIRE D'ENVOIS DES COMMANDES -->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.7.5/angular-route.js"></script>
-    <script src="https://code.angularjs.org/1.7.5/angular-messages.min.js"></script>
-    <script src="./asset/script.js"></script>
-  </body>
-  </html>
+  <br><br><br><br><br>
+  <footer>
+    <div class="container lg-md-3">
+      <p>OQUIFHBOUQBEFOBSQOFUBQEFOUQBFOUQBFOQBUFOIQUBOIQSBHJ</p>
+    </div>
+    <div class="container lg-md-3">
+      <p>Adresse</p>
+    </div>
+    <div class="container lg-md-3">
+      <p>AGYAGYAGYAGYAGAYGAYAGYAGYAGYAH</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.7.5/angular-route.js"></script>
+  <script src="https://code.angularjs.org/1.7.5/angular-messages.min.js"></script>
+  <script src="./asset/script.js"></script>
+</body>
+</html>

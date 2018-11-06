@@ -23,12 +23,21 @@ nav.color {
   background-color: #bc0303;
 }
 
-.homlog {
+.homlogo {
   background-size: cover;
   width: 75px;
   height: 65px;
 }
 
-.homlog2 {
+.homlogo2 {
   color: #ffffff;
+}
+
+.btnsubmit {
+  display: block;
+  margin: auto;
+}
+
+.cheat {
+  margin-top: 20px;
 }
