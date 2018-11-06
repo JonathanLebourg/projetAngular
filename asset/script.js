@@ -13,9 +13,10 @@ var app = angular.module('cart', ['ngMessages', 'ngRoute']);
 app.run(['$rootScope', function ($rootScope) {
   $rootScope.articleArray = [];
   $rootScope.totalPrice = 0;
+  $rootScope.totalAmountProduct = 0;
 }]);
 
-app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', function($scope, $http, $rootScope) {
+app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', '$filter', function($scope, $http, $rootScope, $filter) {
   $http.get('asset/bd-data.json')
   .then(function(response) {
     $scope.datas = response.data;
@@ -27,8 +28,10 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', function($scope, $
     for(var i = 0; i < numberArray ; i++) {
       if($rootScope.articleArray[i].id == idProduct) {
         $rootScope.articleArray[i].amount++;
-        var newPrice = $rootScope.articleArray[i].price * $rootScope.articleArray[i].amount;
+        var newPrice = parseFloat($rootScope.articleArray[i].price) * parseFloat($rootScope.articleArray[i].amount);
         $rootScope.articleArray[i].total = newPrice.toFixed(2);
+        $rootScope.totalPrice = parseFloat($rootScope.totalPrice) + parseFloat($rootScope.articleArray[i].price);
+        $rootScope.totalAmountProduct++;
       }
     }
   }
@@ -39,8 +42,10 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', function($scope, $
     for(var i = 0; i < numberArray ; i++) {
       if($rootScope.articleArray[i].id == idProduct) {
         $rootScope.articleArray[i].amount--;
-        var newPrice = $rootScope.articleArray[i].price * $rootScope.articleArray[i].amount;
+        var newPrice = parseFloat($rootScope.articleArray[i].price) * parseFloat($rootScope.articleArray[i].amount);
         $rootScope.articleArray[i].total = newPrice.toFixed(2);
+        $rootScope.totalPrice = parseFloat($rootScope.totalPrice) - parseFloat($rootScope.articleArray[i].price);
+        $rootScope.totalAmountProduct--;
         if($rootScope.articleArray[i].amount == 0) {
           var indexProduct = $rootScope.articleArray.indexOf($rootScope.articleArray[i]);
           var indexDelete = 1;
@@ -57,14 +62,13 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', function($scope, $
     var numberArray = $rootScope.articleArray.length;
     for(var i = 0; i < numberArray ; i++) {
       if($rootScope.articleArray[i].id == idProduct) {
-        $rootScope.articleArray[i].amount = 0;
-        if($rootScope.articleArray[i].amount == 0) {
-          var indexProduct = $rootScope.articleArray.indexOf($rootScope.articleArray[i]);
-          var indexDelete = 1;
-        }
+        var indexProduct = $rootScope.articleArray.indexOf($rootScope.articleArray[i]);
+        var indexDelete = 1;
       }
     }
     if(indexDelete == 1) {
+      $rootScope.totalPrice = parseFloat($rootScope.totalPrice) - parseFloat($rootScope.articleArray[indexProduct].total);
+      $rootScope.totalAmountProduct = parseInt($rootScope.totalAmountProduct) - parseInt($rootScope.articleArray[indexProduct].amount);
       $rootScope.articleArray.splice(indexProduct, 1);
     }
   }
@@ -72,9 +76,8 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', function($scope, $
 
   //Au click [ajouter au panier]
   $scope.addCart = function(idProduct, titleProduct, priceProduct, pictureProduct, amountProduct, categoryProduct, refProduct, subtitleProduct, pictureProduct, altProduct) {
-
     //Fonction ajout produit
-    var addProduct = function ($rootScope) {
+    var addProduct = function($rootScope) {
       $rootScope.articleArray.push({
         id: idProduct,
         name: titleProduct,
@@ -94,17 +97,23 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', function($scope, $
     var numberArray = $rootScope.articleArray.length;
     if(numberArray == 0) {
       addProduct(this);
+      $rootScope.totalPrice = parseFloat($rootScope.totalPrice) + parseFloat(this.data.price);
+      $rootScope.totalAmountProduct++;
     } else {
       for(var i = 0; i < numberArray ; i++) {
         if($rootScope.articleArray[i].id == idProduct) {
           var existProduct = 1;
           $rootScope.articleArray[i].amount++;
-          var newPrice = $rootScope.articleArray[i].price * $rootScope.articleArray[i].amount;
+          var newPrice = parseFloat($rootScope.articleArray[i].price) * parseFloat($rootScope.articleArray[i].amount);
           $rootScope.articleArray[i].total = newPrice.toFixed(2);
+          $rootScope.totalPrice = parseFloat($rootScope.totalPrice) + parseFloat($rootScope.articleArray[i].price);
+          $rootScope.totalAmountProduct++;
         }
       }
       if (existProduct != 1) {
         addProduct(this);
+        $rootScope.totalPrice = parseFloat($rootScope.totalPrice) + parseFloat(this.data.price);
+        $rootScope.totalAmountProduct++;
       }
     }
   };
