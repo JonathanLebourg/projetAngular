@@ -1,3 +1,7 @@
+/* debut css jon  */
+footer{
+  margin-top: 50px;
+}
 .col-lg-3{
   display: block;
   margin-left: auto;
@@ -6,18 +10,15 @@
   padding-left: 30px;
   padding-right: 30px;
 }
-
 .contributor{
   text-align: center;
   margin: auto;
   font-size: 10px;
 }
-
 .presentation{
   margin-bottom: 50px;
   margin-top: 50px;
 }
-
 video{
   display: block;
   margin: auto;
@@ -26,7 +27,6 @@ video{
   border-radius: 50% 50% 50% 50%;
   border: 5px solid #bc0303;
 }
-
 .text{
   margin: auto;
   text-align: right;
@@ -35,42 +35,122 @@ video{
   font-size: 18px;
   text-align: justify;
 }
-
 iframe{
   width: 200px;
   height: 150px;
   margin: 20px;
   float: right;
 }
-
 .footer{
   border-top: 3px solid #bc0303;
   border-radius: 25px 25px 55px 5px/5px 55px 25px 25px;
 }
-
 .title{
   font-size: 45px;
   color: #bc0303;
 }
-
 h2{
   font-size: 25px;
  }
-
 #contain{
   margin: auto;
 }
+#logofooter{
+  height: 70%;
+  width: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+}
 
-.fa-phone, .fa-map-marker-alt, .fa-facebook-square, .fa-instagram{
+.fa-phone, .fa-map-marker-alt{
   margin-right: 8px;
   color: #bc0303;
 }
 
-.fa-facebook-square, .fa-instagram{
+.fa-facebook-square, .fa-instagram, .col-lg-2{
+  color: #bc0303;
+  margin-top: 20px;
   text-align: center;
-  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .fa-facebook-square:hover, .fa-instagram:hover {
   color: black;
+}
+ /* fin ccs Jon */
+ /* debut css Angela */
+hr{
+  max-width: 50%;
+  }
+.hrTitle{
+  max-width: 50%;
+  background-color: #bc0303;
+
+}
+h1{
+  font-size: 4em;
+  color: #bc0303;
+}
+b{
+  font-weight: bold;
+}
+/* debut boutique */
+.resum-container{
+font-family: 'Montserrat', sans-serif;
+font-weight: lighter;
+font-size: 0.8em
+line-height: 1.6;
+}
+.card-Tite{
+  font-size: 1em;
+  margin-top: 10px;
+}
+.lead{
+font-size: 0.9em;
+text-align: justify;
+}
+
+.item{
+  text-align: center;
+}
+.itemImage{
+  text-align: center;
+}
+.bdName{
+  text-align: center;
+  margin: 0;
+}
+.namebd{
+  font-weight: bold;
+}
+.price-container{
+  text-align: center;
+  font-size: 10px;
+}
+.price{
+  font-weight: bold;
+  font-size: 16px;
+}
+.euros{
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#boutique img{
+  max-height: 300px;
+}
+
+.rowbd1 ,.rowbd2{
+  padding-top: 50px;
+}
+/* fin boutique */
+
+/* madiaquerie pour boutique Angela */
+@media (max-width: 640px) {
+
+  .btn-secondary{
+  margin-bottom: 50px;
+  }
 }
