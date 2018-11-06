@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "ref": "référence",
+    "title": "Titre 1",
+    "subtitle": "Subtitle 1",
+    "category": "Superhero",
+    "description": "Description 1",
+    "price": "00.00",
+    "picture": "Adresse image 1",
+    "alt": "Description image",
+    "stock": "En stock"
+  },
+  {
+    "id": 1,
+    "ref": "référence",
+    "title": "Titre 2",
+    "subtitle": "Subtitle 2",
+    "category": "Superhero",
+    "description": "Description 2",
+    "price": "00.00",
+    "picture": "Adresse image 2",
+    "alt": "Description image",
+    "stock": "En stock"
+  }
+]
