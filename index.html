@@ -11,6 +11,41 @@
 </head>
 
 <body>
+  <!-- DÉBUT NAVBAR -->
+
+  <nav class="navbar navbar-expand-lg color">
+    <a class="navbar-brand txtnavcolor" href="#"><img class="homlogo" src="./images/Img/logo.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x homlogo2"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle txtnavcolor" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catégories <span class="sr-only">(current)</span></a>
+          <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 44px, 0px); top: 0px; left: 0px; will-change: transform;">
+            <a class="dropdown-item drpdown" href="#">Horreur</a>
+            <a class="dropdown-item drpdown" href="#">Humour</a>
+            <a class="dropdown-item drpdown" href="#">Science-Fiction</a>
+            <a class="dropdown-item drpdown" href="#">Super-Héros</a>
+            <a class="dropdown-item drpdown" href="#">Incontournables</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link txtnavcolor" href="#footer">Contacts</a>
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-2">
+        <input class="form-control mr-sm-2" type="text" placeholder="Watchmen ...">
+        <button class="btn btnsearch my-2 my-sm-0" type="submit">Rechercher</button>
+      </form>
+      <a class="nav-link txtnavcolor" href="#"><i class="fas fa-shopping-basket fa-2x"></i></a>
+    </div>
+  </nav>
+
+  <!-- FIN NAVBAR -->
+
 <!-- Début  video de presentation et texte -->
 <div class="container presentation">
  <div class="row">
@@ -29,7 +64,7 @@
 
 
 <!-- Début footer -->
-<footer>
+<footer id="footer">
   <div class="container footer">
    <div class="row" id="end">
     <div class="container col-lg-3">
