@@ -1,46 +1,42 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr" ng-app="cart">
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.css"/>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
   <link rel="stylesheet" href="./asset/style.css" />
   <link rel="shortcut icon" type="image/png" href="images/Img/logorouge.png" />
   <title>BD Lyrium</title>
 </head>
-
-<body ng-controller="bddataCtrl">
+<body ng-controller="bdDataCtrl">
   <!-- DÉBUT NAVBAR -->
-
-  <nav class="navbar navbar-expand-lg color">
-    <a class="navbar-brand txtnavcolor" href="#"><img class="homlogo" src="./images/Img/logorouge.png" alt=""></a>
+  <nav class="navbar navbar-expand-lg color sticky-top">
+    <a class="navbar-brand txtnavcolor" href="#"><img class="homlogo" src="./images/Img/logorouge.png" alt="Logo BD-Lyrium"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x homlogo2"></i></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle txtnavcolor" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catégories <span class="sr-only">(current)</span></a>
+          <a class="nav-link dropdown-toggle txtnavcolor" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Catégories <span class="sr-only">(current)</span></a>
           <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 44px, 0px); top: 0px; left: 0px; will-change: transform;">
-            <a class="dropdown-item drpdown" href="#">Horreur</a>
-            <a class="dropdown-item drpdown" href="#">Humour</a>
-            <a class="dropdown-item drpdown" href="#">Science-Fiction</a>
-            <a class="dropdown-item drpdown" href="#">Super-Héros</a>
-            <a class="dropdown-item drpdown" href="#">Incontournables</a>
+            <a class="dropdown-item drpdown" href="#!/horror">Horreur</a>
+            <a class="dropdown-item drpdown" href="#!/humor">Humour</a>
+            <a class="dropdown-item drpdown" href="#!/fiction">Science-Fiction</a>
+            <a class="dropdown-item drpdown" href="#!/hero">Super-Héros</a>
+            <a class="dropdown-item drpdown" href="#!/unavoidable">Incontournables</a>
           </div>
         </li>
         <li class="nav-item">
           <a class="nav-link txtnavcolor" href="#footer">Contacts</a>
         </li>
       </ul>
-
       <form class="form-inline my-2 my-lg-2">
         <input class="form-control mr-sm-2" type="text" placeholder="Watchmen ...">
         <button class="btn btnsearch my-2 my-sm-0" type="submit">Rechercher</button>
       </form>
-      <a class="nav-link txtnavcolor" href="#"><i class="fas fa-shopping-basket fa-2x"></i></a>
+      <a class="nav-link txtnavcolor" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-shopping-basket fa-2x"></i></a>
     </div>
   </nav>
 
@@ -60,10 +56,8 @@
  </div>
 </div>
 <!-- Fin  video de presentation et texte -->
-
+<div ng-view></div>
 <!-- Modal Panier -->
-<!-- Button Cart -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Panier</button>
 <!-- Cart -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">

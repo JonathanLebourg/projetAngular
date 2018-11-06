@@ -8,20 +8,20 @@
     "category": "Super Héros",
     "description": "Quand Mongul attaque une nouvelle fois la Terre, Superman ne perd pas de temps pour l'affronter... mais le tyran cosmique lui révèle qu'un défi plus important l'attend : celui d'Imperiex ! De plus, le retour de Brainiac va à jamais modifier l'architecture et la technologie de Metropolis, transformant la ville de l'Homme d'Acier en véritable cité de demain !",
     "price": "35,00",
-    "picture": "../images/Img/superheros/IMG_5873.JPG",
+    "picture": "images/Img/superheros/IMG_5873.JPG",
     "alt": "Photo de la couverture de Superman",
     "stock": "En stock"
   },
   {
     "id": 1,
     "ref": "A002",
-    "title": "Auteurs : Grant Morrison (Scénario) / David Finch (Dessin) / Klaus Janson (Dessin)",
+    "title": "Batman",
     "subtitle": "intégrale tome 3",
     "author": "Auteurs : Collectif (Scénario, Dessin) / Jeph Loeb (Scénario) / Ed McGuinness (Dessin)",
     "category": "Super Héros",
     "description": "Bruce Wayne a été envoyé à l'aube de l'humanité par le tyran Darkseid. Amnésique, il va devoir user de toutes ses ressources pour retrouver son chemin dans le temps, se projetant à chaque fois plus en avant dans les époques, pourchassé par un monstre créé par Darkseid. Contient Batman: The Return of Bruce Wayne #1-6, Batman and Robin #16, Batman: The Return #1, Legends of the Dark Knight #6-10, Batman: The Black Casebook, Dark Knight, Dark City.",
     "price": "28,00",
-    "picture": "../images/Img/superheros/IMG_5874.JPG",
+    "picture": "images/Img/superheros/IMG_5874.JPG",
     "alt": "Photo de la couverture de Grant Morrison présente Batman",
     "stock": "En stock"
   },
@@ -34,7 +34,7 @@
     "category": "Super Héros",
     "description": "Beast Boy est tenté de partir, Starfire semble manifester un tempérament de chef et Jackson Hyde hésite encore à faire partie du groupe. L'arrivée de Black Manta, l'ennemi d'Aquaman, est l'occasion d'obtenir des réponses, mais à quel prix ? Quant à Kid Flash, chassé de l'équipe par Damian, il fait son retour alors que le mutique Onomatopée s'en prend à Red Arrow. Les justiciers juvéniles vivent de nouvelles aventures palpitantes grâce à Benjamin PERCY et Khoi PHAM.",
     "price": "5,90",
-    "picture": "../images/Img/superheros/IMG_5875.JPG",
+    "picture": "images/Img/superheros/IMG_5875.JPG",
     "alt": "Photo de la couverture de Batman récit complet tome 9",
     "stock": "En stock"
   },
@@ -47,7 +47,7 @@
     "category": "Super Héros",
     "description": "Suite et fin du crossover Attractions Fatales dans ce quatrième tome consacré aux aventures des X-Men parues en 1993. Retrouvez-y également les héros de l'équipe Or contre le Phalanx !",
     "price": "35,00",
-    "picture": "../images/Img/superheros/IMG_5876.JPG",
+    "picture": "images/Img/superheros/IMG_5876.JPG",
     "alt": "Photo de la couverture de X-men",
     "stock": "En stock"
   },
@@ -60,7 +60,7 @@
     "category": "Super Héros",
     "description": "Fils aîné de roi, T'Challa savait qu'il succèderait un jour à son père, mais son assassinat l'assoit prématurément sur le trône. Le jeune monarque réussira-t-il à protéger son pays aussi valeureusement que feu son père ? Découvrez les jeunes années de La Panthère Noire.",
     "price": "16,00",
-    "picture": "../images/Img/superheros/IMG_5877.JPG",
+    "picture": "images/Img/superheros/IMG_5877.JPG",
     "alt": "Photo de la couverture de La panthère noire",
     "stock": "En stock"
   },
@@ -73,7 +73,7 @@
     "category": "Super Héros",
     "description": "Les séries Venom et Spider-Man 2099 sont toujours au rendez-vous.",
     "price": "6,90",
-    "picture": "../images/Img/superheros/IMG_5878.JPG",
+    "picture": "images/Img/superheros/IMG_5878.JPG",
     "alt": "Photo de la couverture de Spider-man extra tome 2",
     "stock": "En stock"
   },
@@ -86,7 +86,7 @@
     "category": "Science-Fiction",
     "description": " L'histoire se déroule dans un monde peuplé uniquement de robots. Ni humains, ni animaux, ni même végétation. Un monde refermé sur lui-même, sans mémoire de son passé et entouré par un immense nuage sombre et toxique, empêchant les habitants de partir.",
     "price": "17,95",
-    "picture": "../images/Img/sciencefiction/IMG_5904.JPG",
+    "picture": "images/Img/sciencefiction/IMG_5904.JPG",
     "alt": "Photo de la couverture de Les brumes d'arcadia",
     "stock": "En stock"
   },
@@ -99,7 +99,7 @@
     "category": "Science-Fiction",
     "description": "Star Wars, Valérian, Astro Boy, Sillage, Aldébaran... Retrouvez réunies toutes les bandes dessinées qui ont marqué l'histoire de la science-fiction, ce genre toujours présent. et toujours futur !",
     "price": "39,95",
-    "picture": "../images/Img/sciencefiction/IMG_5880.JPG",
+    "picture": "images/Img/sciencefiction/IMG_5880.JPG",
     "alt": "Photo de la couverture de Anthologie de la BD de science fiction",
     "stock": "En stock"
   },
@@ -112,7 +112,7 @@
     "category": "Science-Fiction",
     "description": "Expériences étranges, récits insolites, albums extraordinaires, vous êtes les bienvenus ici, dans un hors-champ qui ne s'impose aucune limite...",
     "price": "23.00",
-    "picture": "../images/Img/sciencefiction/IMG_5881.JPG",
+    "picture": "images/Img/sciencefiction/IMG_5881.JPG",
     "alt": "Photo de la couverture de Anthologie d' art of tome 1",
     "stock": "En stock"
   },
@@ -125,7 +125,7 @@
     "category": "Science-Fiction",
     "description": "L'équipe de RIEN A VOIR se met au rayon vert ! Au menu de ce numéro 26 consacré à la Science-Fiction (couverture par Le Cil Vert) : des vaisseaux spéciaux, des créatures étranges, des technologies loufoques, des expériences de labo ratées et de l'anticipation anti-crispation. Outre Martin Singer et Debyloo, RAV accueille Rollo, M. Roda, Sess, Tase, Capitaine Line, 2d, Messak, Patrick Carlier, Aka, Raul ; et des scénaristes : Nico, Gagnet, Frédéric Chabaud, Franck Viale, Tasmani.",
     "price": "5.00",
-    "picture": "../images/Img/sciencefiction/IMG_5882.JPG",
+    "picture": "images/Img/sciencefiction/IMG_5882.JPG",
     "alt": "Photo de la couverture de Rien A Voir",
     "stock": "En stock"
   },
@@ -138,7 +138,7 @@
     "category": "Science-Fiction",
     "description": "Une vague de crimes trop singuliers et étranges pour un inspecteur moyen frappe depuis peu les rues de New York. Tapis parmi les ombres d'innommables monstruosités venues de par delà les temps et l'espace cherchent à introduire l'inimaginable mal des Grands Anciens.",
     "price": "14.00",
-    "picture": "../images/Img/sciencefiction/IMG_5883.JPG",
+    "picture": "images/Img/sciencefiction/IMG_5883.JPG",
     "alt": "Photo de la couverture de Weird Fantasy",
     "stock": "En stock"
   },
@@ -151,7 +151,7 @@
     "category": "Science-Fiction",
     "description": "Il s'appelle Thomas et il a une double vie. D'un côté, il travaille pour le MODEF, la plus grosse organisation patronale du pays. De l'autre, il s'emploie secrètement à lutter contre l'injustice sociale en répondant coup pour coup à la violence du système.",
     "price": "17.30",
-    "picture": "../images/Img/sciencefiction/IMG_5884.JPG",
+    "picture": "images/Img/sciencefiction/IMG_5884.JPG",
     "alt": "Photo de la couverture de social fiction",
     "stock": "En stock"
   },
@@ -177,7 +177,7 @@
     "category": "Horreur",
     "description": "Découvrez Le cirque des horreurs, le livre de Junji Ito",
     "price": "65.00",
-    "picture": "../images/Img/horreur/IMG_5886.JPG",
+    "picture": "images/Img/horreur/IMG_5886.JPG",
     "alt": "Photo de la couverture de le cirque des horreurs",
     "stock": "En stock"
   },
@@ -190,7 +190,7 @@
     "category": "Horreur",
     "description": "BD Indépendante",
     "price": "12.90",
-    "picture": "../images/Img/horreur/IMG_5887.JPG",
+    "picture": "images/Img/horreur/IMG_5887.JPG",
     "alt": "Photo de la couverture de Choco creed tome 2",
     "stock": "En stock"
   },
@@ -203,7 +203,7 @@
     "category": "Horreur",
     "description": "Cette édition de l'oeuvre de Guido Crepax - qui réunit Comte Dracula et Frankenstein - plonge le lecteur dans une ambiance particulière car l'auteur et dessinateur de ces adaptations insuffle une atmosphère des plus ténébreuses. Ses traits à l'encre de Chine, la mise en page originale, l'utilisation du noir et blanc, un graphisme souvent froid et anguleux très certainement influencé par ses études en architecture, lui permettent ici de donner la pleine mesure de son graphisme et font de cette version de Dracula et de Frankenstein un album unique.",
     "price": "50.00",
-    "picture": "../images/Img/horreur/IMG_5888.JPG",
+    "picture": "images/Img/horreur/IMG_5888.JPG",
     "alt": "Photo de la couverture de Credax",
     "stock": "En stock"
   },
@@ -216,7 +216,7 @@
     "category": "Horreur",
     "description": "La Quête onirique de Kadath l'inconnue, L'Affaire Charles Dexter Ward, Les Montagnes hallucinées et Dans l'abîme du temps, quatre des plus célèbres récits du maître de l'horreur et du fantastique superbement mis en scène par Ian Culbard.",
     "price": "28.00",
-    "picture": "../images/Img/horreur/IMG_5889.JPG",
+    "picture": "images/Img/horreur/IMG_5889.JPG",
     "alt": "Photo de la couverture de Lovecraft",
     "stock": "En stock"
   },
@@ -229,7 +229,7 @@
     "category": "Horreur",
     "description": "Four Color Fear recueille plus de 40 BD américaines d'horreur spectaculaires, inédites en France, d'avant le Comics Code. Réalisées par une multitude de noms classiques dans l'histoire de la bande dessinée. L'ouvrage comprend une impressionnante galerie de couvertures de séries de terreur des années 1950, de plus de 20 éditeurs d'Amérique du Nord et un article passionnant sur les bandes dessinées de terreur des années 1950 par le spécialiste Greg Sadowsky.",
     "price": "27.00",
-    "picture": "../images/Img/horreur/IMG_5890.JPG",
+    "picture": "images/Img/horreur/IMG_5890.JPG",
     "alt": "Photo de la couverture de BD d'horreur des années 50",
     "stock": "En stock"
   },
@@ -242,7 +242,7 @@
     "category": "Les incontournables",
     "description": "Nous avions quitté un Tyler Cross fatigué mais libre après son évasion du centre pénitentiaire d'Angola. Nous le retrouvons fringuant et en chemisette à fleurs sous le soleil de Floride. Entraîné malgré lui par son avocat véreux, Tyler s'immerge dans le monde poisseux de la promotion immobilière. Et se concentre sur un objectif alléchant : un braquage de 700 000 dollars. Dans cette nouvelle affaire criminelle, Tyler Cross rencontre une alliée surprenante en la personne de Shirley Axelrod, apparemment normale, mais qui apprend vite. Très vite.",
     "price": "16.95",
-    "picture": "../images/Img/incontournable/IMG_5891.JPG",
+    "picture": "images/Img/incontournable/IMG_5891.JPG",
     "alt": "Tyler Cross",
     "stock": "En stock"
   },
@@ -255,7 +255,7 @@
     "category": "Les incontournables",
     "description": "La Roya est un fleuve qui prend sa source en France, au col de Tende et se jette dans la Méditerranée à Vintimille, en Italie. Durant l'été 2017, Baudoin et Troubs ont parcouru cette vallée à la rencontre des membres du collectif « Roya Citoyenne », des gens qui, comme Cédric Herrou, viennent en aide aux migrants qui tentent de passer la frontière. Comme à leur habitude (Viva la vida, Le Goût de la terre), ils ont rempli leurs carnets de portraits et ils interrogent avec bienveillance et simplicité, la violence du monde et l'humanité qui en jaillit. Cette fois ils sont ici, dans le sud de la France, confrontés au racisme et à la solidarité. Cette question ne les quitte pas : « Pourquoi pour moi c'est possible et pas pour un Afghan, un Soudanais, un Érythréen, un... ? ». Préfacé par J.M.G Le Clézio, Humains interroge notre vivre ensemble et notre projet européen confronté aux migrations politiques aujourd'hui et climatiques demain et nous rappelle que ce que les états qualifient de flux représentent en fait de précieuses vies humaines.",
     "price": "22.00",
-    "picture": "../images/Img/incontournable/IMG_5892.JPG",
+    "picture": "images/Img/incontournable/IMG_5892.JPG",
     "alt": "humains",
     "stock": "En stock"
   },
@@ -268,7 +268,7 @@
     "category": "Les incontournables",
     "description": "1939, Afghanistan. Autours d’un feu de camp, aux pieds des Bouddhas de Bâmiyân, une voyageuse européenne, Anne-Marie Schwarzenbach, tombe amoureuse d’une archéologue. Cette nuit-là, les deux femmes l’apprennent par la radio, la Seconde Guerre mondiale éclate. 2016, Berlin. Karsten, jeune Allemand qui se passionne pour l’Orient rencontre Nayla, une réfugiée syrienne, dont il s’éprend, malgré leurs différences. A travers ces deux récits entremêlés, deux histoires d’amour atypiques, comme un écho à deux époques complexes, se tissent au fil des pages. Alliant les contraires, rapprochant des êtres qui n’auraient jamais dû se croiser, l’album propose une réflexion sur la difficulté d’aimer aujourd’hui comme hier. ",
     "price": "24.00",
-    "picture": "../images/Img/incontournable/IMG_5893.JPG",
+    "picture": "images/Img/incontournable/IMG_5893.JPG",
     "alt": "Refuge",
     "stock": "En stock"
   },
@@ -281,7 +281,7 @@
     "category": "Les incontournables",
     "description": "Bruce Wayne est mort ! Gotham ne peut rester sans protection et c'est à Dick Grayson et Damian Wayne de reprendre le flambeau sous les masques de Batman et Robin ! Leur baptême du feu ne se fera pas sans heurts et ils devront bien vite affronter les menaces du Professeur Pyg, du Red Hood et d'un Bruce Wayne zombie !",
     "price": "28.00",
-    "picture": "../images/Img/incontournable/IMG_5894.JPG",
+    "picture": "images/Img/incontournable/IMG_5894.JPG",
     "alt": "Description image",
     "stock": "En stock"
   },
@@ -294,7 +294,7 @@
     "category": "Les incontournables",
     "description": "Chicago, fin des années 1960. Karen Reyes, dix ans, est une fan absolue des fantômes, vampires et autres morts-vivants. Elle se voit d'ailleurs comme un petit loupgarou : d'après elle, dans ce monde, il est plus facile d'être un monstre que d'être une femme. Un jour de Saint Valentin, au retour de l'école, Karen apprend la mort de sa belle voisine, Anka Silverberg, une survivante de l'Holocauste. Elle décide alors de mener l'enquête et va vite découvrir qu'entre le passé d'Anka au coeur de l'Allemagne nazie, son quartier en pleine ébullition et les drames qui, tapis dans l'ombre de son quotidien, la guettent, les monstres bons ou « pourris » sont des êtres comme les autres, complexes, torturés, fascinants. Conçu comme le journal intime d'une artiste surdouée, c'est un livre époustouflant.",
     "price": "34.90",
-    "picture": "../images/Img/incontournable/IMG_5895.JPG",
+    "picture": "images/Img/incontournable/IMG_5895.JPG",
     "alt": "J'aime les monstres",
     "stock": "En stock"
   },
@@ -307,7 +307,7 @@
     "category": "Les incontournables",
     "description": "Violette Morris est l'une des sportives françaises les plus titrées de l'histoire. Une championne toutes catégories : boxe, natation, football, athlétisme, course automobile. Elle devint chanteuse de cabaret et égérie des années 30, amie de Jean Cocteau, de Joséphine Baker, de Brassaï... Voilà pour la légende. Une légende noire. Mais la réalité, quelle est-elle ? L'assassinat de cette femme à abattre par tous moyens ne cache-t-il pas autre chose ? Hors norme, sa personnalité est celle d'une femme impossible à enfermer en cases, son histoire est inouïe, son destin forcément tragique !",
     "price": "16.00",
-    "picture": "../images/Img/incontournable/IMG_5896.JPG",
+    "picture": "images/Img/incontournable/IMG_5896.JPG",
     "alt": "Violette Morris",
     "stock": "En stock"
   },
@@ -320,7 +320,7 @@
     "category": "Humour",
     "description": "Lorsqu'on pense Gaston, on pense souvent fainéant. Grosse erreur, pourtant ! Car Gaston et le sport, c'est aussi une passion tout en inventions et en créativité. Avec Jules-de-chez-Smith-en-face, à roulettes dans les couloirs, avec une balle ou des raquettes, sur le toit des éditions Dupuis ou sur les sentiers de campagne, toutes les occasions sont à prendre pour partager un peu de détente et de convivialité en se remuant. Ce sixième tome hors-série a sélectionné pour vous les meilleurs gags de sport de Gaston Lagaffe. Fumiste évident ou athlète caché, ce Gaston ? Vous seriez surpris !",
     "price": "12.50",
-    "picture": "../images/Img/humour/IMG_5897.JPG",
+    "picture": "images/Img/humour/IMG_5897.JPG",
     "alt": "Gaston",
     "stock": "En stock"
   },
@@ -333,7 +333,7 @@
     "category": "Humour",
     "description": "La brigade du tri, Roy le chasseur d'assistés, Tourette-boy, les obsessions capillaires du major Wilkinson, René Monsanto et son double-arrosoir, Gulliver l'alcootest de poche, Capitaine non-voyant, Zinzin le lapin pyromane, Jim le Relookeur solitaire, Régis & Régis, le retour de Captain Nazi, Cyrano de Bergerac le pervers narcissique, le plus beau caniche de tout Kingston, Jésus et son correcteur d'orthographe défaillant... Il y en aura encore pour tout le monde !!",
     "price": "15.95",
-    "picture": "../images/Img/humour/IMG_5898.JPG",
+    "picture": "images/Img/humour/IMG_5898.JPG",
     "alt": "Faux livre",
     "stock": "En stock"
   },
@@ -346,7 +346,7 @@
     "category": "Humour",
     "description": "Roger, le robot intelligent, a fini par apprivoiser son loser d'humain, Hugo. Sans pour autant oublier la tendance de ce dernier à préférer la PLS à Pôle emploi et la PS4 aux soirées entre amis. Finalement largué par sa copine, Hugo n'est pas au bout de ses peines... Surtout lorsque la nouvelle invention de son père, un Roger 2.0, mais en moins bien, se transforme en arme de destruction massive entre les mains d'un terroriste corrompu. Pour Roger devenu le robot à abattre et Hugo, ce n'est que le début des ennuis. L'aventure ne se jouera finalement peut-être plus derrière un écran de console ! Cyprien, le célèbre youtubeur et phénomène web, nous offre la suite des péripéties de Roger et ses humains, où absurde, geek attitude et vannes ininterrompues forment un cocktail explosif ! Aux côtés de Paka au dessin, il continue de nous régaler avec ces strips indépendants mâtinés de références pop culture et bourrés d'humour. C'est certain, les mésaventures de ces héros authentiques et attachants ne laisseront personne en reste !",
     "price": "15.95",
-    "picture": "../images/Img/humour/IMG_5899.JPG",
+    "picture": "images/Img/humour/IMG_5899.JPG",
     "alt": "Roger",
     "stock": "En stock"
   },
@@ -359,7 +359,7 @@
     "category": "Humour",
     "description": "Libre, indépendante, impertinente, audacieuse, avec une dose d'insolence ou d'irrespect flagrant, Fabuleuse est une femme d'aujourd'hui absolument et irrésistiblement provocante. Elle traverse avec autant de candeur que de désinvolture tous les territoires de la vie quotidienne : travail, amour, amitié, société de consommation, écologie, mode, et même savoir-vivre. Politiquement incorrecte, on l'adore autant qu'on la déteste, parce qu'on connaît tous une Fabuleuse, quand on ne l'est pas soi-même... Fabuleuse est née dans les pages de Madame Figaro Pocket. Une partie de ces dessins en est issue, accompagnée de nombreux inédits.",
     "price": "19.00",
-    "picture": "../images/Img/humour/IMG_5900.JPG",
+    "picture": "images/Img/humour/IMG_5900.JPG",
     "alt": "Absolument Fabuleuse",
     "stock": "En stock"
   },
@@ -372,7 +372,7 @@
     "category": "Humour",
     "description": "Bravant tous les dangers, Rosa B. s'infiltre au salon de l'agriculture, aborde sans censure le sujet de la B12 et n'hésite pas à nous faire réfléchir sur les thèmes les plus complexes : - les vegans face aux autres. - les vegans et l'écologie. - le carnisme, le spécisme et l'antispécisme. - les abattoirs et l'éthique...",
     "price": "15.90",
-    "picture": "../images/Img/humour/IMG_5901.JPG",
+    "picture": "images/Img/humour/IMG_5901.JPG",
     "alt": "insolente veggie",
     "stock": "En stock"
   },
@@ -385,7 +385,7 @@
     "category": "Humour",
     "description": "Comment fonctionne l'estomac d'un ogre ? Quelle est la meilleure position pour étudier ? Peut-on se saouler par les pieds ? Toutes ces questions apparemment loufoques et saugrenues sont bonnes à poser. La science improbable sert justement à y répondre. Suivez les expériences du Doc et de son assistante, Nadine, qui tenteront de vous apporter des réponses avec humour et délectation. Et ensuite à vous d'y réfléchir... (ou pas...)",
     "price": "13.95",
-    "picture": "../images/Img/humour/IMG_5902.JPG",
+    "picture": "images/Img/humour/IMG_5902.JPG",
     "alt": "improbablologies",
     "stock": "En stock"
   }

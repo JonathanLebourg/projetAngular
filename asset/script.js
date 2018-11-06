@@ -1,8 +1,11 @@
 $(function () { // lancement des fonctions au chargement de la page
-
   // pop over fonction boostrap
-    $('[data-toggle="popover"]').popover();
+  $('[data-toggle="popover"]').popover();
 
+  // Navbar collapse off
+  $(document).on('click','.navbar-collapse.show',function(e) {
+    $(this).collapse('hide');
+  });
 }) // fin du doc ready
 
 var app = angular.module('cart', ['ngMessages', 'ngRoute']);
@@ -112,7 +115,7 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', function($scope, $
 app.config(function($routeProvider) {
   $routeProvider
   .when('/', {
-    templateUrl : 'view/accueil.html'
+    templateUrl : 'view/incontournables.html'
   })
 
   .when('/contact', {
@@ -125,18 +128,22 @@ app.config(function($routeProvider) {
   })
 
   .when('/fiction', {
-    templateUrl : 'view/sf.html'
+    templateUrl : 'view/sf.html',
+    controller: 'product'
   })
 
   .when('/horror', {
-    templateUrl : 'view/horreur.html'
+    templateUrl : 'view/horreur.html',
+    controller: 'product'
   })
 
   .when('/unavoidable', {
-    templateUrl : 'view/incontournables.html'
+    templateUrl : 'view/incontournables.html',
+    controller: 'product'
   })
 
   .when('/humor', {
-    templateUrl : 'view/humour.html'
+    templateUrl : 'view/humour.html',
+    controller: 'product'
   })
 });
