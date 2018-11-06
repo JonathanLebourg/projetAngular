@@ -12,44 +12,7 @@ var app = angular.module('cart', ['ngMessages', 'ngRoute']);
 
 app.run(['$rootScope', function ($rootScope) {
   $rootScope.articleArray = [];
-}]);
-
-app.controller('product', ['$scope', '$routeParams', '$rootScope', function($scope, $routeParams, $rootScope) {
-
-  //Au click [ajouter au panier]
-  $scope.addCart = function(idProduct, titleProduct, priceProduct, pictureProduct, amountProduct, descriptionProduct) {
-
-    //Fonction ajout produit
-    var addProduct = function ($rootScope) {
-      $rootScope.articleArray.push({
-        id: idProduct,
-        name: titleProduct,
-        price: priceProduct,
-        picture: pictureProduct,
-        amount: amountProduct,
-        description: descriptionProduct,
-        total: priceProduct
-      });
-    };
-
-    //Vérification : si produit existe alors augmente la quantité sinon créer le produit
-    var numberArray = $rootScope.articleArray.length;
-    if(numberArray == 0) {
-      addProduct(this);
-    } else {
-      for(var i = 0; i < numberArray ; i++) {
-        if($rootScope.articleArray[i].id == idProduct) {
-          var existProduct = 1;
-          $rootScope.articleArray[i].amount++;
-          var newPrice = $rootScope.articleArray[i].price * $rootScope.articleArray[i].amount;
-          $rootScope.articleArray[i].total = newPrice;
-        }
-      }
-      if (existProduct != 1) {
-        addProduct(this);
-      }
-    }
-  };
+  $rootScope.totalPrice = 0;
 }]);
 
 app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', function($scope, $http, $rootScope) {
@@ -65,7 +28,7 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', function($scope, $
       if($rootScope.articleArray[i].id == idProduct) {
         $rootScope.articleArray[i].amount++;
         var newPrice = $rootScope.articleArray[i].price * $rootScope.articleArray[i].amount;
-        $rootScope.articleArray[i].total = newPrice;
+        $rootScope.articleArray[i].total = newPrice.toFixed(2);
       }
     }
   }
@@ -77,7 +40,7 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', function($scope, $
       if($rootScope.articleArray[i].id == idProduct) {
         $rootScope.articleArray[i].amount--;
         var newPrice = $rootScope.articleArray[i].price * $rootScope.articleArray[i].amount;
-        $rootScope.articleArray[i].total = newPrice;
+        $rootScope.articleArray[i].total = newPrice.toFixed(2);
         if($rootScope.articleArray[i].amount == 0) {
           var indexProduct = $rootScope.articleArray.indexOf($rootScope.articleArray[i]);
           var indexDelete = 1;
@@ -106,8 +69,45 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', function($scope, $
     }
   }
 
-  //Total article
 
+  //Au click [ajouter au panier]
+  $scope.addCart = function(idProduct, titleProduct, priceProduct, pictureProduct, amountProduct, categoryProduct, refProduct, subtitleProduct, pictureProduct, altProduct) {
+
+    //Fonction ajout produit
+    var addProduct = function ($rootScope) {
+      $rootScope.articleArray.push({
+        id: idProduct,
+        name: titleProduct,
+        price: priceProduct,
+        picture: pictureProduct,
+        amount: amountProduct,
+        category: categoryProduct,
+        total: priceProduct,
+        ref: refProduct,
+        subtitle: subtitleProduct,
+        image: pictureProduct,
+        alt: altProduct
+      });
+    };
+
+    //Vérification : si produit existe alors augmente la quantité sinon créer le produit
+    var numberArray = $rootScope.articleArray.length;
+    if(numberArray == 0) {
+      addProduct(this);
+    } else {
+      for(var i = 0; i < numberArray ; i++) {
+        if($rootScope.articleArray[i].id == idProduct) {
+          var existProduct = 1;
+          $rootScope.articleArray[i].amount++;
+          var newPrice = $rootScope.articleArray[i].price * $rootScope.articleArray[i].amount;
+          $rootScope.articleArray[i].total = newPrice.toFixed(2);
+        }
+      }
+      if (existProduct != 1) {
+        addProduct(this);
+      }
+    }
+  };
 }]);
 
 
@@ -118,32 +118,23 @@ app.config(function($routeProvider) {
     templateUrl : 'view/incontournables.html'
   })
 
-  .when('/contact', {
-    templateUrl : 'view/contact.html'
-  })
-
   .when('/hero', {
-    templateUrl : 'view/superheros.html',
-    controller: 'product'
+    templateUrl : 'view/superheros.html'
   })
 
   .when('/fiction', {
-    templateUrl : 'view/sf.html',
-    controller: 'product'
+    templateUrl : 'view/sf.html'
   })
 
   .when('/horror', {
-    templateUrl : 'view/horreur.html',
-    controller: 'product'
+    templateUrl : 'view/horreur.html'
   })
 
   .when('/unavoidable', {
-    templateUrl : 'view/incontournables.html',
-    controller: 'product'
+    templateUrl : 'view/incontournables.html'
   })
 
   .when('/humor', {
-    templateUrl : 'view/humour.html',
-    controller: 'product'
+    templateUrl : 'view/humour.html'
   })
 });
