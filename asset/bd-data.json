@@ -388,5 +388,83 @@
     "picture": "images/Img/humour/IMG_5902.JPG",
     "alt": "improbablologies",
     "stock": "En stock"
+  },
+  {
+    "id": 30,
+    "ref": "F001",
+    "title": "Lampe Batman projecteur",
+    "subtitle": "Bat-signal",
+    "author": "Allumez cette lampe pour faire accourir Batman chez vous !",
+    "category": "Goodies",
+    "description": "Eh oui, le Bat-Signal n'est plus réservé à James Gordon maintenant ! Vous aussi venez d'obtenir la possibilité de faire passer des messages à votre super-héros préféré pour qu'il vienne vous secourir au plus vite !",
+    "price": "24.90",
+    "picture": "images/Img/goodies/IMG_5906.JPG",
+    "alt": "Photo Lampe Batman projecteur",
+    "stock": "En stock"
+  },
+  {
+    "id": 31,
+    "ref": "F002",
+    "title": "Tirelire Dragonball",
+    "subtitle": "Son Goku 14 cm",
+    "author": "Le protagoniste de DragonBall a enfin une tirelire à son effigie !",
+    "category": "Goodies",
+    "description": "Avec ses cheveux noir hérissés et sa tenue d'entraînement, il est le personnage le plus connu de la série. Egalement connu pour sa bonne humeur, son enthousiasme et sa très grande naïveté (même adulte) il a été le compagnon de jeu de plusieurs générations !",
+    "price": "14.90",
+    "picture": "images/Img/goodies/IMG_5909.JPG",
+    "alt": "Photo Tirelire Dragonball",
+    "stock": "En stock"
+  },
+  {
+    "id": 32,
+    "ref": "F003",
+    "title": "Lot de 4 Verres à Shot",
+    "subtitle": "Logos DC Comics",
+    "author": "Faites la fête avec vos héros préférés",
+    "category": "Goodies",
+    "description": "Et si vous trinquiez avec vos super-héros préférés ? Dynamisez vos apéros avec ces superbes shooters à l'image des plus grands de l'écurie DC : Batman, Superman, Flash et Green Lantern. Ils sont tous au rendez-vous ce soir !",
+    "price": "12.90",
+    "picture": "images/Img/goodies/IMG_5910.JPG",
+    "alt": "Photo de Lot de 4 Verres à Shot",
+    "stock": "En stock"
+  },
+  {
+    "id": 33,
+    "ref": "F004",
+    "title": "T-shirt Superman",
+    "subtitle": "pour hommes ordinaires",
+    "author": "Clark Kent ne va bientôt plus être le seul à se déshabiller dans la rue.",
+    "category": "Goodies",
+    "description": "Clark Kent fait le malin en se déshabillant dans le coin de la rue, à déchirer sa chemise et à sortir ses pecs!!",
+    "price": "19.90",
+    "picture": "images/Img/goodies/IMG_5911.JPG",
+    "alt": "Photo T-shirt Superman",
+    "stock": "En stock"
+  },
+  {
+    "id": 34,
+    "ref": "F005",
+    "title": "Panneau en Métal Marvel",
+    "subtitle": "Venom Epic Battle",
+    "author": "Que vous avez de grandes dents !",
+    "category": "Goodies",
+    "description": "Le symbiote le plus connu de l'univers Marvel a maintenant son propre film ! C'est assez énorme pour en faire de jolis panneaux en métal à accrocher dans votre salon, non ? En plus d'être hyper stylé, cette décoration est très simple à poser sur un mur, grâce à un système de montage magnétique.",
+    "price": "39.00",
+    "picture": "images/Img/goodies/IMG_5912.JPG",
+    "alt": "Photo Panneau en Métal Marvel",
+    "stock": "En stock"
+  },
+  {
+    "id": 35,
+    "ref": "F006",
+    "title": "Théière Marvel",
+    "subtitle": "Spider-Man",
+    "author": "T'inquiète pas, il y a aura pas de toile dans ton bon p'tit thé ! ",
+    "category": "Goodies",
+    "description": "Ah, qu'est-ce que c'est bon de s'accorder une petite pause thé pendant la journée ! A la fois relaxant et vivifiant, antioxydant et gourmand, le thé ne nous déçoit jamais. C'est bien simple, on ne pourrait pas s'en passer.",
+    "price": "34.90",
+    "picture": "images/Img/goodies/IMG_5913.JPG",
+    "alt": "Photo Théière Marvel",
+    "stock": "En stock"
   }
 ]

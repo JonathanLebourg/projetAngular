@@ -43,9 +43,20 @@ nav.color {
 .cheat {
   margin-top: 20px;
 }
+
+.fa-shopping-basket{
+  color: white;
+}
+
+.fa-shopping-basket:hover{
+  color: black;
+}
 /* fin de la navbar */
 
 /* debut css jon  */
+#point0{
+  margin-top: 150px;
+}
 footer{
   margin-top: 50px;
 }
@@ -267,3 +278,9 @@ text-align: justify;
 }
 .shopping-cart {
     margin-top: 20px;
+}
+
+/* fleche pour remonter */
+/* .fa-arrow-alt-circle-up {
+  color: #bc0303;
+} */
