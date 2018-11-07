@@ -43,6 +43,10 @@ nav.color {
 .cheat {
   margin-top: 20px;
 }
+
+.curs:hover {
+  cursor: pointer;
+}
 /* fin de la navbar */
 
 /* debut css jon  */
