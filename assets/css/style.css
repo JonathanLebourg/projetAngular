@@ -118,6 +118,10 @@ h1 {
 }
 /* fin boutique */
 /* Panier Fabien */
+.hasError {
+  color: red;
+}
+
 .quantity {
   float: left;
   margin-right: 15px;
