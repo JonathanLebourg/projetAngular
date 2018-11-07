@@ -1,16 +1,17 @@
-<div ng-repeat="data in datas | filter : {category: 'Superhero'}">
-  <div id="{{data.id}}" class="item col-md-4 col-12">
-    <div class="itemDetails">
-      <div class="itemImage">
-        <img src="{{data.picture}}" alt="{{data.alt}}" />
-      </div>
-      <div class="itemText">
+<div class="container-fluid mx-auto" id="boutique">
+  <!-- <div class="container superheros"> -->
+  <div id="superheros" class="divTitre" text-center>
+    <h1 class="text-center mb-5">Super Héros</h1>
+  </div>
+    <!-- <div class="row rowbd1"> -->
+  <div class="row">
+    <div ng-repeat="data in datas | filter : {category: 'Super Héros'}" class="col-lg-4 text-center mb-5">
+      <img src="{{data.picture}}" alt="{{data.alt}}" />
       <hr class="hrTitle" />
-        <a tabindex="0" class="btn btn-transparent" role="button" data-toggle="popover" data-trigger="focus" title="{{data.title}}" data-placement="bottom" data-content="Résumé : {{data.description}}">{{hero.title}}<br>{{data.subtitle}}</a>
-        <hr class="hrTitle" />
-        <p class="price-container">Réf : {{data.ref}}<span class="price"><br><br>{{data.price}}</span><span class="euros">€</span></p>
-      </div>
+      <a tabindex="0" class="btn btn-transparent" role="button" data-toggle="popover" data-trigger="focus" title="{{data.title}}" data-placement="bottom" data-content="Résumé : {{data.description}}">{{data.title}}<br>{{data.subtitle}}</a>
+      <hr class="hrTitle" />
+      <p class="price-container">Réf : {{data.ref}}<span class="price pl-5">{{data.price}} €</span></p>
+      <button name="addCart" ng-click="addCart(data.id, data.title, data.price, data.picture, 1, data.category)" type="button" class="btn btn-secondary">Ajouter au panier</button>
     </div>
-    <button name="addCart" ng-click="addCart(data.id, data.title, data.price, data.picture, 1, data.category)" type="button" class="btn btn-secondary">Ajouter au panier</button>
   </div>
 </div>
