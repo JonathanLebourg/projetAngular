@@ -1,8 +1,9 @@
-<div class="alert alert-dismissible alert-success pb-5">
+<div class="alert alert-dismissible alert-success pb-5" ng-repeat="infos in customerArray">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <h1>Félicitations</h1>
+  <h1>Félicitations {{infos.lastname}} {{infos.name}}</h1>
   <p>Votre commande est validée !</p>
-  <p>Vous allez recevoir prochainement un mail pour vous informer de son expédition</p>
+  <p>Vous allez recevoir prochainement un mail à l'adresse {{infos.mail}}, pour vous informer de son expédition</p>
+  <p>Votre adresse de livraison : {{infos.adress}}, {{infos.postal}} {{infos.city}}</p>
   <p class="float-right">L'équipe BD Lyrium</p>
 </div>
 <div class="container-fluid mx-auto" id="boutique">

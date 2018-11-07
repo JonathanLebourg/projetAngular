@@ -3,26 +3,64 @@
     <h1 class="alert-heading h3">Vos Informations</h1>
     <div class="card border-primary mb-3">
       <div class="card-body">
-        <form>
+        <form id="formContact" name="formContact">
           <fieldset>
             <div class="row">
               <div class="form-group col-6">
-                <label for="custfname">Nom</label>
-                <input type="text" class="form-control" id="custfname" placeholder="Entrez votre nom." />
+                <label for="lastName">Nom : </label>
+                <input type="text" name="lastName" class="form-control" id="lastName" ng-model="lastName" ng-pattern="/^[a-zA-ZÂ-ÿ- ']+$/" placeholder="Entrez votre prénom" required />
+                <div ng-messages="formContact.lastName.$error" ng-if="formContact.lastName.$touched">
+                  <p class="hasError" ng-message="required">Le champ est obligatoire</p>
+                  <p class="hasError" ng-message="pattern">Le nom saisi est incorrect</p>
+                </div>
               </div>
               <div class="form-group col-6">
-                <label for="custlname">Prénom</label>
-                <input type="text" class="form-control" id="custlname" placeholder="Entrez votre Prénom." />
+                <label for="name">Prénom : </label>
+                <input type="text" name="name" class="form-control" id="name" ng-model="name" ng-pattern="/^[a-zA-ZÂ-ÿ- ']+$/" placeholder="Entrez votre prénom" required />
+                <div ng-messages="formContact.name.$error" ng-if="formContact.name.$touched">
+                  <p class="hasError" ng-message="required">Le champ est obligatoire</p>
+                  <p class="hasError" ng-message="pattern">Le prénom saisi est incorrect</p>
+                </div>
               </div>
             </div>
-            <div class="form-group">
-              <label for="custaddress">Adresse</label>
-              <input type="text" class="form-control" id="custaddress" aria-describedby="addressHelp" placeholder="Entre votre adresse." />
+            <div class="form-group col-12">
+              <label for="adress">Adresse : </label>
+              <input type="text" name="adress" class="form-control" id="adress" ng-model="adress" ng-pattern="/^[a-zA-ZÂ-ÿ0-9- ']+$/" placeholder="Entrez votre adresse" required />
               <small id="addressHelp" class="form-text text-muted">Nous ne divulguerons jamais votre adresse personnelle à un groupe tiers.</small>
+              <div ng-messages="formContact.adress.$error" ng-if="formContact.adress.$touched">
+                <p class="hasError" ng-message="required">Le champ est obligatoire</p>
+                <p class="hasError" ng-message="pattern">Le prénom saisi est incorrect</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-6">
+                <label for="city">Ville : </label>
+                <input type="text" name="city" class="form-control" id="city" ng-model="city" ng-pattern="/^[a-zA-ZÂ-ÿ- ']+$/" placeholder="Entrez votre ville" required />
+                <div ng-messages="formContact.city.$error" ng-if="formContact.city.$touched">
+                  <p class="hasError" ng-message="required">Le champ est obligatoire</p>
+                  <p class="hasError" ng-message="pattern">La ville saisie est incorrecte</p>
+                </div>
+              </div>
+              <div class="form-group col-6">
+                <label for="postalCode">Code Postal : </label>
+                <input type="text" name="postalCode" class="form-control" id="postalCode" ng-model="postalCode" ng-pattern="/^[0-9]{5}$/" placeholder="Entrez votre code potal" required />
+                <div ng-messages="formContact.postalCode.$error" ng-if="formContact.postalCode.$touched">
+                  <p class="hasError" ng-message="required">Le champ est obligatoire</p>
+                  <p class="hasError" ng-message="pattern">Le code postal saisi est incorrect</p>
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-12">
+              <label for="mail">E-Mail : </label>
+              <input type="text" name="mail" class="form-control" id="mail" ng-model="mail" ng-pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z]+\.([a-zA-Z]){2,6}$/" placeholder="Entrez votre adresse mail" required />
+              <div ng-messages="formContact.mail.$error" ng-if="formContact.mail.$touched">
+                <p class="hasError" ng-message="required">Le champ est obligatoire</p>
+                <p class="hasError" ng-message="pattern">L'adresse mail saisie est incorrecte</p>
+              </div>
             </div>
             <div class="form-check">
               <label class="form-check-label">
-                <p><input type="checkbox" />J'ai lu et accepté les petites conditions que les entreprises mettent et servent à glisser une douille au clients quand ils s'y attendent le moins.</p>
+                <p><input type="checkbox" ng-model="conditions" id="conditions" required/>J'ai lu et accepté les petites conditions que les entreprises mettent et servent à glisser une douille au clients quand ils s'y attendent le moins.</p>
               </label>
             </div>
           </fieldset>
@@ -30,7 +68,9 @@
       </div>
       <div class="card-footer d-flex justify-content-between pl-2">
         <a href="#!/cart" class="btn btn-success mr-2">Retour au panier</a>
-        <a href="#!/valid" class="btn btn-success" ng-click="deleteCart()">Commander</a>
+        <form action="#!/valid">
+          <input type="submit" ng-disabled="formContact.$invalid" ng-click="deleteCart()" id="clickClose" class="btn btn-success" value="Commander" />
+        </form>
       </div>
     </div>
   </div>

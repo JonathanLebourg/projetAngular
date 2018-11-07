@@ -22,6 +22,7 @@ app.run(['$rootScope', function ($rootScope) {
   $rootScope.articleArray = [];
   $rootScope.totalPrice = 0;
   $rootScope.totalAmountProduct = 0;
+  $rootScope.customerArray = [];
 }]);
 
 app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', '$filter', function($scope, $http, $rootScope, $filter) {
@@ -81,8 +82,24 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', '$filter', functio
     }
   }
 
+  //Delete customer
+  $scope.deleteCustomer = function() {
+    $rootScope.articleArray.splice(0, 1);
+  }
+
   //Au click [Commander]
   $scope.deleteCart = function() {
+
+    $rootScope.customerArray.push({
+      lastname: $scope.lastName,
+      name: $scope.name,
+      adress: $scope.adress,
+      postal: $scope.postalCode,
+      city: $scope.city,
+      mail: $scope.mail
+    });
+    console.log($rootScope.customerArray);
+
     var numberArray = $rootScope.articleArray.length;
     $rootScope.totalPrice = 0;
     $rootScope.totalAmountProduct = 0;
@@ -91,8 +108,6 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', '$filter', functio
 
   //Au click [ajouter au panier]
   $scope.addCart = function(idProduct, titleProduct, priceProduct, pictureProduct, amountProduct, categoryProduct, refProduct, subtitleProduct, pictureProduct, altProduct) {
-    //Popup Ajout au panier
-
 
     //Fonction ajout produit
     var addProduct = function($rootScope) {
@@ -173,10 +188,12 @@ app.config(function($routeProvider) {
   })
 
   .when('/form', {
-    templateUrl : 'view/form.html'
+    templateUrl : 'view/form.html',
+    controller : 'bdDataCtrl'
   })
 
   .when('/valid', {
-    templateUrl : 'view/valid.html'
+    templateUrl : 'view/valid.html',
+    controller : 'bdDataCtrl'
   })
 });

@@ -9,7 +9,7 @@
         <!-- Product -->
         <div ng-repeat="article in articleArray" class="row mb-3 pb-3 border-bottom">
           <div class="col-lg-2 col-md-12 col-sm-12 text-center">
-            <img class="img-responsive" src="{{article.image}}" alt="{{article.alt}}"  height="80">
+            <img class="img-responsive" src="{{article.image}}" alt="{{article.alt}}"  height="80" />
           </div>
           <div class="col-lg-4 col-md-12 col-sm-12">
             <h1 class="product-name h4"><strong>{{article.name}} {{article.subtitle}}</strong></h1>
@@ -21,9 +21,9 @@
             </div>
             <div class="col-lg-3 col-md-4 col-sm-4 col-6 mb-2">
               <div class="quantity">
-                <input ng-click="moreProduct(article.id)" type="button" value="+" class="plus">
-                <input type="text" step="1" max="99" min="1" value="{{article.amount}}" title="Qantité" class="qty" size="4" disabled>
-                <input ng-click="lessProduct(article.id)" type="button" value="-" class="minus">
+                <input ng-click="moreProduct(article.id)" type="button" value="+" class="plus" />
+                <input type="text" step="1" max="99" min="1" value="{{article.amount}}" title="Qantité" class="qty" size="4" disabled />
+                <input ng-click="lessProduct(article.id)" type="button" value="-" class="minus" />
               </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-4 col-12 text-md-right text-sm-right text-center">
@@ -36,7 +36,10 @@
         <!-- End Product -->
       </div>
       <div class="card-footer">
-        <a href="#!/form" class="btn btn-success float-right mt-1 ml-2">Valider mon panier</a>
+        <form action="#!/form">
+          <input type="submit" ng-click="deleteCustomer()" ng-disabled="articleArray.length == 0" id="clickClose" class="btn btn-success float-right mt-1 ml-2" value="Valider mon panier" />
+          <a href="#!/" class="btn btn-success mt-1 float-right">Accueil</a>
+        </form>
         <div class="mt-2">
           <h1 class="h3">Total : <b>{{totalPrice | number:2}}€</b></h1>
         </div>

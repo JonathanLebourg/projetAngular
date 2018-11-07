@@ -45,10 +45,6 @@
           <a class="nav-link text-white" href="#footer">Contacts</a>
         </li>
       </ul>
-      <!-- <form class="form-inline my-2 my-lg-2">
-        <input class="form-control mr-sm-2" type="text" placeholder="Watchmen ...">
-        <button class="btn btnsearch my-2 my-sm-0" type="submit">Rechercher</button>
-      </form> -->
       <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-shopping-basket fa-2x"></i></a>
       <div class="amount"><span class="badge badge-pill badge-danger">{{totalAmountProduct}}</span></div>
     </div>
@@ -119,7 +115,9 @@
               <!-- End Product -->
             </div>
             <div class="card-footer">
-              <a id="clickClose" href="#!/cart" class="btn btn-success float-right mt-1 ml-2">Valider mon panier</a>
+              <form action="#!/cart">
+                <input type="submit" ng-disabled="articleArray.length == 0" id="clickClose" class="btn btn-success float-right mt-1 ml-2" value="Valider mon panier" />
+              </form>
               <div class="mt-2">
                 <h1 class="h3">Total : <b>{{totalPrice | number:2}}€</b></h1>
               </div>
