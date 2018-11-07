@@ -146,4 +146,8 @@ app.config(function($routeProvider) {
     templateUrl : 'view/humour.html',
     controller: 'product'
   })
+  .when('/goodies', {
+    templateUrl : 'view/goodies.html',
+    controller: 'product'
+  })
 });
