@@ -1,0 +1,37 @@
+<div class="container mb-5">
+  <div class="alert alert-secondary">
+    <h1 class="alert-heading h3">Vos Informations</h1>
+    <div class="card border-primary mb-3">
+      <div class="card-body">
+        <form>
+          <fieldset>
+            <div class="row">
+              <div class="form-group col-6">
+                <label for="custfname">Nom</label>
+                <input type="text" class="form-control" id="custfname" placeholder="Entrez votre nom." />
+              </div>
+              <div class="form-group col-6">
+                <label for="custlname">Prénom</label>
+                <input type="text" class="form-control" id="custlname" placeholder="Entrez votre Prénom." />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="custaddress">Adresse</label>
+              <input type="text" class="form-control" id="custaddress" aria-describedby="addressHelp" placeholder="Entre votre adresse." />
+              <small id="addressHelp" class="form-text text-muted">Nous ne divulguerons jamais votre adresse personnelle à un groupe tiers.</small>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <p><input type="checkbox" />J'ai lu et accepté les petites conditions que les entreprises mettent et servent à glisser une douille au clients quand ils s'y attendent le moins.</p>
+              </label>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="card-footer d-flex justify-content-between pl-2">
+        <a href="#!/cart" class="btn btn-success mr-2">Retour au panier</a>
+        <a href="#!/valid" class="btn btn-success" ng-click="deleteCart()">Commander</a>
+      </div>
+    </div>
+  </div>
+</div>

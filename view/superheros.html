@@ -4,12 +4,19 @@
   </div>
   <div class="row">
     <div ng-repeat="data in datas | filter : {category: 'Super Héros'}" class="col-lg-4 text-center mb-5">
-      <img src="{{data.picture}}" alt="{{data.alt}}" />
-      <hr class="hrTitle" />
-      <a tabindex="0" class="btn btn-transparent" role="button" data-toggle="popover" data-trigger="focus" title="{{data.author}}" data-placement="bottom" data-content="Résumé : {{data.description}}">{{data.title}}<br>{{data.subtitle}}</a>
-      <hr class="hrTitle" />
+      <div>
+        <img class="borderCard p-2" src="{{data.picture}}" alt="{{data.alt}}" />
+      </div>
+      <hr class="hrTitle"/>
+      <a tabindex="0" class="btn btn-transparent mb-2" role="button" data-toggle="popover" data-trigger="focus" title="{{data.author}}" data-placement="bottom" data-content="Résumé : {{data.description}}">{{data.title}}<br>{{data.subtitle}}</a>
       <p class="text-center"><span class="sizeRef">Réf : {{data.ref}}</span><span class="pl-5">{{data.price}} €</span></p>
       <button name="addCart" ng-click="addCart(data.id, data.title, data.price, data.picture, 1, data.category, data.ref, data.subtitle, data.picture, data.alt)" type="button" class="btn btn-secondary">Ajouter au panier</button>
+      <hr class="hrTitle"/>
     </div>
   </div>
+</div>
+
+
+<div class="card border-secondary mb-3">
+
 </div>

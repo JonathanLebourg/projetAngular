@@ -1,0 +1,22 @@
+<div class="alert alert-dismissible alert-success pb-5">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h1>Félicitations</h1>
+  <p>Votre commande est validée !</p>
+  <p>Vous allez recevoir prochainement un mail pour vous informer de son expédition</p>
+  <p class="float-right">L'équipe BD Lyrium</p>
+</div>
+<div class="container-fluid mx-auto" id="boutique">
+  <div id="superheros" class="divTitre">
+    <h1 class="text-center mb-5">Les incontournables</h1>
+  </div>
+  <div class="row">
+    <div ng-repeat="data in datas | filter : {category: 'Les incontournables'}" class="col-lg-4 text-center mb-5">
+      <img src="{{data.picture}}" alt="{{data.alt}}" />
+      <hr class="hrTitle" />
+      <a tabindex="0" class="btn btn-transparent" role="button" data-toggle="popover" data-trigger="focus" title="{{data.author}}" data-placement="bottom" data-content="Résumé : {{data.description}}">{{data.title}}<br />{{data.subtitle}}</a>
+      <hr class="hrTitle" />
+      <p class="text-center"><span class="sizeRef">Réf : {{data.ref}}</span><span class="pl-5">{{data.price}} €</span></p>
+      <button name="addCart" ng-click="addCart(data.id, data.title, data.price, data.picture, 1, data.category, data.ref, data.subtitle, data.picture, data.alt)" type="button" class="btn btn-secondary">Ajouter au panier</button>
+    </div>
+  </div>
+</div>

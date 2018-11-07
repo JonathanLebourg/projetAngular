@@ -11,6 +11,23 @@ nav.color, .btnsearch:hover, .drpdown:hover {
   width: 75px;
   height: 65px;
 }
+
+.badge {
+  font-size: 1rem;
+  border: 2px solid black;
+}
+
+.badge-danger {
+  background-color: #d10a22;
+}
+
+.fa-shopping-basket:hover, .fa-shopping-basket {
+  cursor: pointer;
+}
+
+.fa-shopping-basket:hover {
+  font-size: 250%;
+}
 /* fin de la navbar */
 /* debut css jon  */
 .contributor p {
@@ -73,6 +90,11 @@ iframe {
 }
  /* fin ccs Jon */
  /* debut css Angela */
+.borderCard {
+  border-radius: 5px 5px 5px 5px/25px 25px 25px 5px;
+  border: 2px solid #333;
+}
+
 .hrTitle {
   max-width: 50%;
   background-color: #bc0303;
@@ -87,11 +109,15 @@ h1 {
   font-size: 0.7rem;
 }
 /* debut boutique */
-#boutique img{
+#boutique img {
   max-height: 300px;
 }
+
+.borderCard {
+  max-width: 200px;
+}
 /* fin boutique */
-/* Panier */
+/* Panier Fabien */
 .quantity {
   float: left;
   margin-right: 15px;

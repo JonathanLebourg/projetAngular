@@ -10,10 +10,12 @@
   <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css" />
   <!-- FontAwesome CSS -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+  <!-- Animated CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
   <!-- Me CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <!-- Shortcut Icon -->
-  <link rel="shortcut icon" type="image/png" href="images/Img/logorouge.png" />
+  <link rel="shortcut icon" type="image/png" href="images/logo/logorouge.png" />
   <title>BD Lyrium</title>
 </head>
 <!-- Controller -->
@@ -27,26 +29,28 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Catégories <span class="sr-only">(current)</span></a>
+          <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Bandes Déssinées<span class="sr-only">(current)</span></a>
           <div class="dropdown-menu" x-placement="bottom-start">
             <a class="dropdown-item drpdown" href="#!/horror">Horreur</a>
             <a class="dropdown-item drpdown" href="#!/humor">Humour</a>
             <a class="dropdown-item drpdown" href="#!/fiction">Science-Fiction</a>
             <a class="dropdown-item drpdown" href="#!/hero">Super-Héros</a>
             <a class="dropdown-item drpdown" href="#!/unavoidable">Incontournables</a>
-            <a class="dropdown-item drpdown" href="#!/goodies">Goodies</a>
           </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#!/goodies">Goodies</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#footer">Contacts</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-2">
+      <!-- <form class="form-inline my-2 my-lg-2">
         <input class="form-control mr-sm-2" type="text" placeholder="Watchmen ...">
         <button class="btn btnsearch my-2 my-sm-0" type="submit">Rechercher</button>
-      </form>
+      </form> -->
       <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-shopping-basket fa-2x"></i></a>
-      <div class="amount">{{totalAmountProduct}}</div>
+      <div class="amount"><span class="badge badge-pill badge-danger">{{totalAmountProduct}}</span></div>
     </div>
   </nav>
   <!-- Fin Navbar -->
@@ -55,15 +59,16 @@
     <div class="row">
       <div class="col-md-6">
         <!-- Mute vidéo -->
-        <video src="videos/videodepresentation.mp4" autoplay loop muted></video>
+        <video src="videos/videodepresentation.mp4" autoplay loop></video>
       </div>
       <div class="col-md-6 text-justify textPresentation p-4">
         <p>Unique Comic-Shop du Havre, BD Lyrium se spécialise donc dans la bande dessinée américaine, le comics, aussi bien en volumes reliées qu’en périodiques. La boutique comprend également une large sélection de produits dérivés : Vêtements, affiches, figurines et statues, goodies… le tout sous le regards d’une impressionnante statue de Hulk !</p>
       </div>
     </div>
   </div>
-  <!-- Fin  video de presentation et texte -->
-  <div ng-view></div>
+  <!-- Fin video de presentation et texte -->
+  <!-- Ng-View -->
+<div ng-view class="animated zoomIn"></div>
   <!-- Modal Panier -->
   <!-- Cart -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -114,21 +119,21 @@
               <!-- End Product -->
             </div>
             <div class="card-footer">
-              <a href="" class="btn btn-success float-right mt-1 ml-2">Valider mon panier</a>
+              <a id="clickClose" href="#!/cart" class="btn btn-success float-right mt-1 ml-2">Valider mon panier</a>
               <div class="mt-2">
-                <p>Total : <b>{{totalPrice | number:2}}€</b></p>
+                <h1 class="h3">Total : <b>{{totalPrice | number:2}}€</b></h1>
               </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button data-dismiss="modal" class="btn btn-outline-info btn-sm float-right">Continuer ma commande</button>
+          <button data-dismiss="modal" class="btn btn-secondary float-right">Continuer ma commande</button>
         </div>
       </div>
     </div>
   </div>
   <!-- Début footer -->
-  <footer>
+  <footer id="footer">
     <div class="container footer text-center">
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-12 col-12">

@@ -1,12 +1,18 @@
-$(function () { // lancement des fonctions au chargement de la page
-  // pop over fonction boostrap
-  $(document).on('click','[data-toggle="popover"]',function(e) {
-    $(this).popover('show');
+// lancement des fonctions au chargement de la page
+$(function () {
+  // popover fonction boostrap
+  $(document).on('click','#clickClose',function(e) {
+    $('#exampleModalCenter').modal('hide');
   });
 
   // Navbar collapse off
   $(document).on('click','.navbar-collapse.show',function(e) {
     $(this).collapse('hide');
+  });
+
+  //Modal fermeture au click
+  $(document).on('click','[data-toggle="popover"]',function(e) {
+    $(this).popover('show');
   });
 }) // fin du doc ready
 
@@ -75,9 +81,19 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', '$filter', functio
     }
   }
 
+  //Au click [Commander]
+  $scope.deleteCart = function() {
+    var numberArray = $rootScope.articleArray.length;
+    $rootScope.totalPrice = 0;
+    $rootScope.totalAmountProduct = 0;
+    $rootScope.articleArray.splice(0, numberArray);
+  }
 
   //Au click [ajouter au panier]
   $scope.addCart = function(idProduct, titleProduct, priceProduct, pictureProduct, amountProduct, categoryProduct, refProduct, subtitleProduct, pictureProduct, altProduct) {
+    //Popup Ajout au panier
+
+
     //Fonction ajout produit
     var addProduct = function($rootScope) {
       $rootScope.articleArray.push({
@@ -121,7 +137,6 @@ app.controller('bdDataCtrl',['$scope', '$http', '$rootScope', '$filter', functio
   };
 }]);
 
-
 //Route
 app.config(function($routeProvider) {
   $routeProvider
@@ -151,5 +166,17 @@ app.config(function($routeProvider) {
 
   .when('/goodies', {
     templateUrl : 'view/goodies.html'
+  })
+
+  .when('/cart', {
+    templateUrl : 'view/cart.html'
+  })
+
+  .when('/form', {
+    templateUrl : 'view/form.html'
+  })
+
+  .when('/valid', {
+    templateUrl : 'view/valid.html'
   })
 });
